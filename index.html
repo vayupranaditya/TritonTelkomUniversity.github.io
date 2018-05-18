@@ -1,205 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TRITON Telkom University</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
 
-    <style>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
 
-      * {
-        /* border: solid red 0.5px; */
-        color: #fff;
-      }
+  <style>
+    * {
+      /* border: solid red 0.5px; */
+      color: #fff;
+    }
 
-      @font-face {
-        font-family: Anurati;
-        src: url('./asset/font/Anurati-Regular.otf')
-      }        
-      
-      @font-face {
-        font-family: Blanka;
-        src: url('./asset/font/Blanka-Regular.otf')
-      }        
-      
-      @font-face {
-        font-family: Infinity;
-        src: url('./asset/font/Infinity.ttf')
-      }        
-      
+    @font-face {
+      font-family: Anurati;
+      src: url('./asset/font/Anurati-Regular.otf')
+    }
 
-      html, body {
-        height: 100%;
-        background-color: cornflowerblue;
-      }
+    @font-face {
+      font-family: Blanka;
+      src: url('./asset/font/Blanka-Regular.otf')
+    }
 
-      .Triton {
-        letter-spacing: 10px;
-        font-family: Anurati;
-        font-size: 20px;
-      }
+    @font-face {
+      font-family: Infinity;
+      src: url('./asset/font/Infinity.ttf')
+    }
 
-      .highlight {
-        /* padding-top:50%; */
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        background-image: url('./asset/pic/bg1.jpg');
-        background-size: cover;
-        background-attachment: fixed;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 20%;
-        height: 102%;
-      }
 
-      .navbar {
-        position: fixed;
-        width: 100%;
-      }
+    html,
+    body {
+      height: 100%;
+      background-color: cornflowerblue;
+    }
 
-      .desc {
-        padding-right: 20%;
-        text-align: initial;
-        font-family: Arial, Helvetica, sans-serif;
-        color: blanchedalmond;
-        font-size: 20px;
-        margin: 0 auto 0 auto;
-      }
-    
-      .column {
-        /* text-align: center; */
-      }
+    .Triton {
+      letter-spacing: 10px;
+      font-family: Anurati;
+      font-size: 20px;
+    }
 
-      .logo {
-        filter: drop-shadow(-30px 10px 10px #111);
-        margin: 10px;
-      }
+    .highlight {
+      /* padding-top:50%; */
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      background-image: url('./asset/pic/bg1.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 20%;
+      height: 102%;
+    }
 
-      h1 {
-        color: #fff;
-      }
-      
-      .learn-more {
-        padding: 10px;
-        filter: drop-shadow(0px 5px 3px #000);
-      }
 
-      footer {
-        padding-top: 10px; 
-        padding-left: 10%;
-      }
-      
-      .about-triton {
-        height: 10%;
-        padding: 0 10%;
-        text-align: center;
-      }
+    .desc {
+      padding-right: 20%;
+      text-align: initial;
+      font-family: Arial, Helvetica, sans-serif;
+      color: blanchedalmond;
+      font-size: 20px;
+      margin: 0 auto 0 auto;
+    }
 
-      .bg2 {
-        background-image: url(./asset/pic/about-triton.jpg);
-        background-attachment: fixed;
-        background-size: cover;
-        height: 100%;
-      }
+    .logo {
+      filter: drop-shadow(-30px 10px 10px #111);
+      margin: 10px;
+    }
 
-      .bg3 {
-        background-image: url(./asset/pic/register.jpg);
-        background-attachment: fixed;
-        background-size: cover;
-        height: 72.5%;
-      }
+    h1 {
+      color: #fff;
+    }
 
-    </style>
+    .learn-more {
+      padding: 10px;
+      filter: drop-shadow(0px 5px 3px #000);
+    }
+
+    footer {
+      padding-top: 10px;
+      padding-left: 10%;
+    }
+
+    .transition-panel {
+      height: 10%;
+      padding: 0 10%;
+      text-align: center;
+    }
+
+    .bg2 {
+      background-image: url(./asset/pic/about-triton.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      height: 100%;
+    }
+
+    .bg3 {
+      background-image: url(./asset/pic/register.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      height: 72.5%;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 
 </head>
 <body>
-    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img class="logo" src="./asset/pic/triton logo.png" alt="" srcset="">
-            <h1 class="Triton">TRITON</h1>
-          </a>
-          
-          
+  <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img class="logo" src="./asset/pic/triton logo.png" alt="" srcset="">
+        <h1 class="Triton">TRITON</h1>
+      </a>
 
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <div class="navbar-menu">
-            <!-- navbar start, navbar end -->
-            <div class="navbar-start">
-                <a target="_blank" href="" class="navbar-item has-text-white"><i class="fab fa-facebook has-text-white"></i>&nbsp; Facebook</a>
-                <a target="_blank" href="" class="navbar-item has-text-white"><i class="fab fa-instagram has-text-white"></i>&nbsp; Instagram</a>
-                <a target="_blank" href="" class="navbar-item has-text-white"><i class="fab fa-medium has-text-white"></i>&nbsp; Blog</a>
-                <a target="_blank" href="" class="navbar-item has-text-white"><i class="fa fa-at has-text-white"></i>&nbsp; Contact Us</a>
-            </div>
-            <div class="navbar-end">
-                <a target="_blank" href="" class="navbar-item has-text-info">Login</a>
-                <a target="_blank" href="" class="navbar-item has-text-warning">Register</a>
-            </div>
-        </div>
-      </nav>
 
-      <div class="highlight columns">
-        <div class="container">
-            <h1 class="title has-text-white is-1">DARE TO REVOLUTIONIZE INDONESIA ?</h1>
-            <h2 class="title has-text-white is-2">a national-wide internet of things hackathon</h2>
-            presented by <a href="https://telkomuniversity.ac.id/" class="has-text-danger">Telkom</a> University <br>
-            <a target="_blank" href="#" class="button is-warning" style="width: 200px; height: 35px;">Register</a>      
-        </div>
-        
-        <dir class="learn-more container">
-          <strong class="has-text-white title is-3">Learn More Below</strong>
-          <i class="fas fa-chevron-down has-text-white"></i>    
-        </dir>
-        
-        
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+
+    </div>
+    <div id="nav-menu" class="navbar-menu">
+      <!-- navbar start, navbar end -->
+      <div class="navbar-start">
+        <a target="_blank" href="" class="navbar-item ">
+          <i class="fab fa-facebook "></i>&nbsp; Facebook</a>
+        <a target="_blank" href="" class="navbar-item ">
+          <i class="fab fa-instagram "></i>&nbsp; Instagram</a>
+        <a target="_blank" href="" class="navbar-item ">
+          <i class="fab fa-medium "></i>&nbsp; Blog</a>
+        <a target="_blank" href="" class="navbar-item ">
+          <i class="fa fa-at "></i>&nbsp; Contact Us</a>
       </div>
+      <div class="navbar-end">
+        <a target="_blank" href="" class="navbar-item has-text-info">Login</a>
+        <a target="_blank" href="" class="navbar-item has-text-warning">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="highlight columns">
+    <div class="container">
+      <h1 class="title has-text-white is-1">DARE TO REVOLUTIONIZE INDONESIA ?</h1>
+      <h2 class="title has-text-white is-2">a national-wide internet of things hackathon</h2>
+      presented by
+      <a href="https://telkomuniversity.ac.id/" class="has-text-danger">Telkom</a> University
+      <br>
+      <a target="_blank" href="#" class="button is-warning" style="width: 200px; height: 35px;">Register</a>
+    </div>
+
+    <dir class="learn-more container">
+      <strong class="has-text-white title is-3">Learn More Below</strong>
+      <i class="fas fa-chevron-down has-text-white"></i>
+    </dir>
+  </div>
+
+
+  <div class="transition-panel">
+    <h1 class="title is-1 has-text-white">
+      About Triton
+    </h1>
+  </div>
+
+
+  <div class="bg2">
+    <div class="columns" style="padding: 5%">      
+      <div class="column" style="text-align: center;">
+        <img src="./asset/pic/triton logo.png" alt="" width="75%">    
+      </div>
+      <div class="column" style="filter: drop-shadow(0px 5px 10px #000); background-color:  rgba(0, 0, 0, 0.7); border-radius: 0 10%">
+          <div style="text-align: left; padding: 10% 0 0   0">
+            Triton ( Telkom Industrial Hackathon), is a national-wide Internet of Things hackathon competition, as a mean to further improve and inovate our industrial sector with the emergence of IoT-based solution 
+          </div>
+          <br>
+          <div id="hidden-desc" >
+              we challenge you, the indonesia brightest thinker to show off your IoT based solution and inovation to compete against other in these category:
+              <ul style="padding-left: 10%">
+                <li>
+                  <i class="fa fa-flask"></i>
+                  <p>
+                    Chemistry
+                  </p>
+                </li>
+                <li>
+                  <i class="fa fa-shopping-basket"></i>
+                  <p>
+                    Small Micro and Medium Enterprises
+                  </p>
+                </li>
+                <li>
+                  <i class="fa fa-heartbeat"></i>
+                  <p>
+                    Health
+                  </p>
+                </li>
+                <li>
+                  <i class="fa fa-home"></i>
+                  <p>
+                    Home Automation
+                  </p>
+                </li>
+                <li>
+                  <i class="fa fa-lock"></i>
+                  <p>
+                    Security
+                  </p>
+                </li>
+                <li>
+                  <i class="fa fa-gavel"></i>
+                  <p>
+                    Government
+                  </p>
+                </li>
+                <li>
+                  <i class="fa fa-dollar-sign"></i>
+                  <p>
+                    Economy
+                  </p>
+                </li>
+                <li>
+                  <i class="fa fa-leaf"></i>
+                  <p>
+                    Agriculture
+                  </p>
+                </li>
+              </ul>
+            </div>
+      </div>
+    </div>
+
+    <div style="text-align: center">
+      <a href="" class="button is-warning">Download Rule Book</a>    
+    </div>
+    
+  </div>
       
 
-      <div class="about-triton">
-        <h1 class="title is-1 has-text-white">
-          About Triton
-        </h1> 
-      </div>
+  <div class="transition-panel">
+    <h1 class="title is-1 has-text-white">
+      Register now
+    </h1>
+  </div>
 
-      <div class="bg2">
-        kagdkwd
-      </div>
+  <div class="bg3">
+    kagdkwd
+  </div>
 
-      <div class="about-triton">
-          <h1 class="title is-1 has-text-white">
-            Register now
-          </h1> 
-      </div>
-  
-      <div class="bg3">
-        kagdkwd
-      </div>
-  
-  
 
-    <footer>
-        <div class="columns">
-          <div class="column">
-            <strong class="has-text-warning">Contact Person</strong>
-            <ul>
-              <li>Lorem, ipsum dolor.</li>
-              <li>Lorem, ipsum dolor.</li>
-              <li>Lorem, ipsum dolor.</li>
-            </ul>
-          </div>
-          <div class="column">Media Partner</div>
-          <div class="column">Sponsor</div> 
-        </div>
-      </footer>
+  <script>
+
+    $().ready(() => {
+      if ($(window).width() <= 1024) {
+        $('#hidden-desc').toggleClass('hidden')
+      } 
+    })
+
+    $(window).resize(() => {
+      if ($(window).width() > 1024) {
+        console.log('big')
+        $('.navbar-item').removeClass('has-text-black');
+        $('.fab').removeClass('has-text-black');
+        $('.fa').removeClass('has-text-black');
+        $('#hidden-desc').removeClass('hidden');
+      } else {
+        if ($('.navbar-burger').hasClass('is-active')) {
+          $('.navbar-item').toggleClass('has-text-black');
+          $('.fab').toggleClass('has-text-black');
+          $('.fa').toggleClass('has-text-black');
+        }
+        $('#hidden-desc').addClass('hidden')
+      }
+    })
+
+    $('.navbar-burger').click(() => {
+      console.log('small')
+      $('.navbar-item').toggleClass('has-text-black');
+      $('.fab').toggleClass('has-text-black');
+      $('.fa').toggleClass('has-text-black');
+      $('#nav-menu').toggleClass('is-active');
+      $('.navbar-burger').toggleClass('is-active');
+      
+      
+    });
+  </script>
+
+
+  <footer>
+    <div class="columns">
+      <div class="column">
+        <strong class="has-text-warning">Contact Person</strong>
+        <ul>
+          <li>Lorem, ipsum dolor.</li>
+          <li>Lorem, ipsum dolor.</li>
+          <li>Lorem, ipsum dolor.</li>
+        </ul>
+      </div>
+      <div class="column">Media Partner</div>
+      <div class="column">Sponsor</div>
+    </div>
+  </footer>
 
 </body>
+
 </html>
