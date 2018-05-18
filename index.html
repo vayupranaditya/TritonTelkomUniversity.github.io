@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <style>
+
+      * {
+        /* border: solid red 0.5px; */
+        color: #fff;
+      }
+
+      @font-face {
+        font-family: Anurati;
+        src: url('./asset/font/Anurati-Regular.otf')
+      }        
+      
+      @font-face {
+        font-family: Blanka;
+        src: url('./asset/font/Blanka-Regular.otf')
+      }        
+      
+      @font-face {
+        font-family: Infinity;
+        src: url('./asset/font/Infinity.ttf')
+      }        
+      
+
+      html, body {
+        height: 100%;
+        background-color: cornflowerblue;
+      }
+
+      .Triton {
+        letter-spacing: 10px;
+        font-family: Anurati;
+        font-size: 20px;
+      }
+
+      .highlight {
+        /* padding-top:50%; */
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background-image: url('./asset/pic/bg1.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20%;
+        height: 102%;
+      }
+
+      .navbar {
+        position: fixed;
+        width: 100%;
+      }
+
+      .desc {
+        padding-right: 20%;
+        text-align: initial;
+        font-family: Arial, Helvetica, sans-serif;
+        color: blanchedalmond;
+        font-size: 20px;
+        margin: 0 auto 0 auto;
+      }
+    
+      .column {
+        /* text-align: center; */
+      }
+
+      .logo {
+        filter: drop-shadow(-30px 10px 10px #111);
+        margin: 10px;
+      }
+
+      h1 {
+        color: #fff;
+      }
+      
+      .learn-more {
+        padding: 10px;
+        filter: drop-shadow(0px 5px 3px #000);
+      }
+
+      footer {
+        padding-top: 10px; 
+        padding-left: 10%;
+      }
+      
+      .about-triton {
+        height: 10%;
+        padding: 0 10%;
+        text-align: center;
+      }
+
+      .bg2 {
+        background-image: url(./asset/pic/about-triton.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+      }
+
+      .bg3 {
+        background-image: url(./asset/pic/register.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        height: 72.5%;
+      }
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img class="logo" src="./asset/pic/triton logo.png" alt="" srcset="">
+            <h1 class="Triton">TRITON</h1>
+          </a>
+          
+          
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu">
+            <!-- navbar start, navbar end -->
+            <div class="navbar-start">
+                <a target="_blank" href="" class="navbar-item has-text-white"><i class="fab fa-facebook has-text-white"></i>&nbsp; Facebook</a>
+                <a target="_blank" href="" class="navbar-item has-text-white"><i class="fab fa-instagram has-text-white"></i>&nbsp; Instagram</a>
+                <a target="_blank" href="" class="navbar-item has-text-white"><i class="fab fa-medium has-text-white"></i>&nbsp; Blog</a>
+                <a target="_blank" href="" class="navbar-item has-text-white"><i class="fa fa-at has-text-white"></i>&nbsp; Contact Us</a>
+            </div>
+            <div class="navbar-end">
+                <a target="_blank" href="" class="navbar-item has-text-info">Login</a>
+                <a target="_blank" href="" class="navbar-item has-text-warning">Register</a>
+            </div>
+        </div>
+      </nav>
+
+      <div class="highlight columns">
+        <div class="container">
+            <h1 class="title has-text-white is-1">DARE TO REVOLUTIONIZE INDONESIA ?</h1>
+            <h2 class="title has-text-white is-2">a national-wide internet of things hackathon</h2>
+            presented by <a href="https://telkomuniversity.ac.id/" class="has-text-danger">Telkom</a> University <br>
+            <a target="_blank" href="#" class="button is-warning" style="width: 200px; height: 35px;">Register</a>      
+        </div>
+        
+        <dir class="learn-more container">
+          <strong class="has-text-white title is-3">Learn More Below</strong>
+          <i class="fas fa-chevron-down has-text-white"></i>    
+        </dir>
+        
+        
+      </div>
+      
+
+      <div class="about-triton">
+        <h1 class="title is-1 has-text-white">
+          About Triton
+        </h1> 
+      </div>
+
+      <div class="bg2">
+        kagdkwd
+      </div>
+
+      <div class="about-triton">
+          <h1 class="title is-1 has-text-white">
+            Register now
+          </h1> 
+      </div>
+  
+      <div class="bg3">
+        kagdkwd
+      </div>
+  
+  
+
+    <footer>
+        <div class="columns">
+          <div class="column">
+            <strong class="has-text-warning">Contact Person</strong>
+            <ul>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+            </ul>
+          </div>
+          <div class="column">Media Partner</div>
+          <div class="column">Sponsor</div> 
+        </div>
+      </footer>
+
+</body>
+</html>
