@@ -17,6 +17,7 @@
   <style>
     * {
       /* border: solid red 0.5px; */
+      box-sizing: border-box;
       color: #fff;
     }
 
@@ -93,8 +94,9 @@
 
     .transition-panel {
       height: 10%;
-      padding: 0 10%;
+      padding: 0 0 10px 0;
       text-align: center;
+      margin: 0;
     }
 
     .bg2 {
@@ -108,12 +110,61 @@
       background-image: url(./asset/pic/register.jpg);
       background-attachment: fixed;
       background-size: cover;
-      height: 72.5%;
+      height: 50%;
     }
 
     .hidden {
       display: none;
     }
+
+    p {
+      text-align: center;
+    }
+
+    .category-item {
+      text-align: center;
+    }
+
+    .timeline {
+      padding: 5% 0 10% 0;
+      height: fit-content;
+    }
+
+    .timeline li {
+      list-style-type: none;
+      width: 20%;
+      float: left;
+      position: relative;
+      text-align: center;
+    }
+    
+    .timeline li:before {
+      content: '';
+      width: 30px;
+      height: 30px;
+      display: block;
+      text-align: center;
+      border: solid orange 15px;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+    }
+
+    .timeline li:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      background-color: orange;
+      border: solid white 3px;
+      top: 10px;
+      left: -50%;
+      z-index: -1;
+    }
+
+    .timeline li:first-child::after {
+      display: none;
+    }
+
   </style>
 
 </head>
@@ -182,82 +233,127 @@
       <div class="column" style="text-align: center;">
         <img src="./asset/pic/triton logo.png" alt="" width="75%">    
       </div>
-      <div class="column" style="filter: drop-shadow(0px 5px 10px #000); background-color:  rgba(0, 0, 0, 0.7); border-radius: 0 10%">
+      <div class="column" style="filter: drop-shadow(0px 5px 10px #000); background-color:  rgba(0, 0, 0, 0.5); border-radius: 0 10%">
           <div style="text-align: left; padding: 10% 0 0   0">
             Triton ( Telkom Industrial Hackathon), is a national-wide Internet of Things hackathon competition, as a mean to further improve and inovate our industrial sector with the emergence of IoT-based solution 
           </div>
           <br>
           <div id="hidden-desc" >
               we challenge you, the indonesia brightest thinker to show off your IoT based solution and inovation to compete against other in these category:
-              <ul style="padding-left: 10%">
-                <li>
-                  <i class="fa fa-flask"></i>
-                  <p>
-                    Chemistry
-                  </p>
-                </li>
-                <li>
-                  <i class="fa fa-shopping-basket"></i>
-                  <p>
-                    Small Micro and Medium Enterprises
-                  </p>
-                </li>
-                <li>
-                  <i class="fa fa-heartbeat"></i>
-                  <p>
-                    Health
-                  </p>
-                </li>
-                <li>
-                  <i class="fa fa-home"></i>
-                  <p>
-                    Home Automation
-                  </p>
-                </li>
-                <li>
-                  <i class="fa fa-lock"></i>
-                  <p>
-                    Security
-                  </p>
-                </li>
-                <li>
-                  <i class="fa fa-gavel"></i>
-                  <p>
-                    Government
-                  </p>
-                </li>
-                <li>
-                  <i class="fa fa-dollar-sign"></i>
-                  <p>
-                    Economy
-                  </p>
-                </li>
-                <li>
-                  <i class="fa fa-leaf"></i>
-                  <p>
-                    Agriculture
-                  </p>
-                </li>
-              </ul>
+              <div style="padding: 10%">
+                  <ul class="columns" style="justify-content: space-between">
+                      <li class="category-item" style="font-size: 30px">
+                        <i class="fa fa-flask"></i>
+                        <p style="font-size: 15px">
+                          Chemistry
+                        </p>
+                      </l>
+                      <li class="category-item" style="font-size: 30px">
+                        <i class="fa fa-shopping-basket"></i>
+                        <p style="font-size: 15px">
+                          Small Micro and <br>Medium Enterprises
+                        </p>
+                      </li>
+                      <li class="category-item" style="font-size: 30px">
+                        <i class="fa fa-heartbeat"></i>
+                        <p style="font-size: 15px">
+                          Health
+                        </p>
+                      </li>
+                      <li class="category-item" style="font-size: 30px">
+                        <i class="fa fa-home"></i>
+                        <p style="font-size: 15px">
+                          Home <br>Automation
+                        </p>
+                      </li>
+                     
+                    </ul>
+                    <ul class="columns" style="justify-content: space-between">
+                        <li class="category-item" style="font-size: 30px">
+                            <i class="fa fa-lock"></i>
+                            <p  style="font-size: 15px">
+                              Security
+                            </p>
+                          </li>
+                          <li class="category-item" style="font-size: 30px">
+                            <i class="fa fa-gavel"></i>
+                            <p style="font-size: 15px">
+                              Government
+                            </p>
+                          </li>
+                          <li class="category-item" style="font-size: 30px">
+                            <i class="fa fa-dollar-sign"></i>
+                            <p style="font-size: 15px">
+                              Economy
+                            </p>
+                          </li>
+                          <li class="category-item" style="font-size: 30px">
+                            <i class="fa fa-leaf"></i>
+                            <p style="font-size: 15px">
+                              Agriculture
+                            </p>
+                          </li>
+                    </ul>
+              </div>
+              
             </div>
       </div>
     </div>
 
     <div style="text-align: center">
-      <a href="" class="button is-warning">Download Rule Book</a>    
+      <a href="" class="button is-warning">Download Rule Book</a> 
+         
     </div>
     
   </div>
       
 
-  <div class="transition-panel">
+  <div class="transition-panel timel">
     <h1 class="title is-1 has-text-white">
-      Register now
+      Timeline
     </h1>
+    
   </div>
 
-  <div class="bg3">
-    kagdkwd
+  <div class="timeline">
+      <ol>
+          <li>
+            <div>
+              <h3 class="title is-4 has-text-white">Tanggal</h3>
+              <p>Registration and Proposal Submition wave 1</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 class="title is-4 has-text-white">Tanggal</h3>
+              <p>Registration and Proposal Submition wave 2</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 class="title is-4 has-text-white">Tanggal</h3>
+              <p>Registration and Proposal Submition wave 3</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 class="title is-4 has-text-white">Tanggal</h3>
+              <p>Finalist Announcement</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 class="title is-4 has-text-white">Tanggal</h3>
+              <p>Final Hackathon</p>
+            </div>
+          </li>
+      </ol>
+  </div>
+
+
+  <div class="bg3"  style="text-align: center;">
+      <h1 class="title is-1 has-text-white learn-more" style="padding: 30px">Register Your Team Now</h1>
+      <a href="" class="button is-warning">Register Now</a>  
   </div>
 
 
@@ -265,8 +361,11 @@
 
     $().ready(() => {
       if ($(window).width() <= 1024) {
-        $('#hidden-desc').toggleClass('hidden')
-      } 
+        $('#hidden-desc').addClass('hidden')
+        $('.bg3').addClass('hidden');
+        $('.timeline').addClass('hidden');
+        $('.timel').addClass('hidden'); 
+      }
     })
 
     $(window).resize(() => {
@@ -276,13 +375,20 @@
         $('.fab').removeClass('has-text-black');
         $('.fa').removeClass('has-text-black');
         $('#hidden-desc').removeClass('hidden');
+        $('.bg3').removeClass('hidden');
+        $('.timeline').removeClass('hidden');
+        $('.timel').removeClass('hidden');
       } else {
         if ($('.navbar-burger').hasClass('is-active')) {
           $('.navbar-item').toggleClass('has-text-black');
           $('.fab').toggleClass('has-text-black');
           $('.fa').toggleClass('has-text-black');
         }
-        $('#hidden-desc').addClass('hidden')
+        $('#hidden-desc').addClass('hidden');
+        $('.bg3').addClass('hidden');
+        $('.timeline').addClass('hidden');
+        $('.timel').addClass('hidden');
+        
       }
     })
 
@@ -304,7 +410,6 @@
       <div class="column">
         <strong class="has-text-warning">Contact Person</strong>
         <ul>
-          <li>Lorem, ipsum dolor.</li>
           <li>Lorem, ipsum dolor.</li>
           <li>Lorem, ipsum dolor.</li>
         </ul>
