@@ -14,7 +14,7 @@
   <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
-        <img class="logo" src="../pic/triton logo.png" alt="" srcset="">
+        <img class="logo" src="pic/triton logo.png" alt="" srcset="">
         <h1 class="Triton">TRITON</h1>
       </a>
 
@@ -30,18 +30,18 @@
     <div id="nav-menu" class="navbar-menu">
       <!-- navbar start, navbar end -->
       <div class="navbar-start">
-        <a target="_blank" href="" class="navbar-item ">
+        <a target="_blank" href="#" class="navbar-item ">
           <i class="fab fa-facebook "></i>&nbsp; Facebook</a>
-        <a target="_blank" href="" class="navbar-item ">
+        <a target="_blank" href="#" class="navbar-item ">
           <i class="fab fa-instagram "></i>&nbsp; Instagram</a>
-        <a target="_blank" href="" class="navbar-item ">
+        <a target="_blank" href="#" class="navbar-item ">
           <i class="fab fa-medium "></i>&nbsp; Blog</a>
-        <a target="_blank" href="" class="navbar-item ">
+        <a target="_blank" href="#" class="navbar-item ">
           <i class="fa fa-at "></i>&nbsp; Contact Us</a>
       </div>
       <div class="navbar-end">
-        <a target="_blank" href="" class="navbar-item has-text-info">Login</a>
-        <a target="_blank" href="" class="navbar-item has-text-warning">Register</a>
+        <a target="_blank" href="#" class="navbar-item has-text-info">Login</a>
+        <a target="_blank" href="#" class="navbar-item has-text-warning">Register</a>
       </div>
     </div>
   </nav>
@@ -73,7 +73,7 @@
   <div class="bg2">
     <div class="columns" style="padding: 5%">      
       <div class="column" style="text-align: center;">
-        <img src="../pic/triton logo.png" alt="" width="75%">    
+        <img src="pic/triton logo.png" alt="" width="75%">    
       </div>
       <div class="column" style="filter: drop-shadow(0px 5px 10px #000); background-color:  rgba(0, 0, 0, 0.5); border-radius: 0 10%">
           <div style="text-align: left; padding: 10% 0 0   0">
@@ -143,7 +143,7 @@
     </div>
 
     <div style="text-align: center">
-      <a href="" class="button is-warning">Download Rule Book</a> 
+      <a href="#" class="button is-warning">Download Rule Book</a> 
          
     </div>
     
@@ -195,7 +195,57 @@
 
   <div class="bg3"  style="text-align: center;">
       <h1 class="title is-1 has-text-white learn-more" style="padding: 30px">Register Your Team Now</h1>
-      <a href="" class="button is-warning">Register Now</a>  
+      <a href="#" class="button is-warning">Register Now</a>  
   </div>
 
+  <script>
+    $().ready(() => {
+      if ($(window).width() <= 1024) {
+        $('#hidden-desc').addClass('hidden')
+        $('.bg3').addClass('hidden');
+        $('.timeline').addClass('hidden');
+        $('.timel').addClass('hidden'); 
+      }
+    })
+
+    $(window).resize(() => {
+      if ($(window).width() > 1024) {
+        console.log('big')
+        $('.navbar-item').removeClass('has-text-black');
+        $('.fab').removeClass('has-text-black');
+        $('.fa').removeClass('has-text-black');
+        $('#hidden-desc').removeClass('hidden');
+        $('.bg3').removeClass('hidden');
+        $('.timeline').removeClass('hidden');
+        $('.timel').removeClass('hidden');
+      } else {
+        if ($('.navbar-burger').hasClass('is-active')) {
+          $('.navbar-item').toggleClass('has-text-black');
+          $('.fab').toggleClass('has-text-black');
+          $('.fa').toggleClass('has-text-black');
+        }
+        $('#hidden-desc').addClass('hidden');
+        $('.bg3').addClass('hidden');
+        $('.timeline').addClass('hidden');
+        $('.timel').addClass('hidden');
+        
+      }
+    })
+
+    $('.navbar-burger').click(() => {
+      console.log('small')
+      $('.navbar-item').toggleClass('has-text-black');
+      $('.fab').toggleClass('has-text-black');
+      $('.fa').toggleClass('has-text-black');
+      $('#nav-menu').toggleClass('is-active');
+      $('.navbar-burger').toggleClass('is-active');
+      
+      
+    });
+
+  </script>
   <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

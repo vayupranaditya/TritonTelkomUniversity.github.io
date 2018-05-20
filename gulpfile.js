@@ -72,6 +72,13 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/font'))
 })
 
+// font-awesome
+gulp.task('font-awesome', function() {
+    return gulp.src('bower_components/font-awesome/web-fonts-with-css/webfonts/**/*')
+            .pipe(gulp.dest('dist/webfonts/'));
+});
+
+
 gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/pic', '!dist/pic/**/*']);
 });
@@ -84,7 +91,7 @@ gulp.task('watch', ['browserSync', 'sass'], function() {
 
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', ['sass', 'useref', 'images', 'fonts'],
+  runSequence('clean:dist', ['sass', 'useref', 'images', 'fonts', 'font-awesome'],
     callback
   )
 })
