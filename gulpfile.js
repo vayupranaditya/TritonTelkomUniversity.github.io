@@ -68,12 +68,12 @@ gulp.task('useref', function(){
 });
 
 gulp.task('fonts', function() {
-  return gulp.src('app/fonts/**/*')
-  .pipe(gulp.dest('dist/fonts'))
+  return gulp.src('app/font/**/*')
+  .pipe(gulp.dest('dist/font'))
 })
 
 gulp.task('clean:dist', function() {
-  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
+  return del.sync(['dist/**/*', '!dist/pic', '!dist/pic/**/*']);
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function() {
