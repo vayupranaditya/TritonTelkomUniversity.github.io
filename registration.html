@@ -49,20 +49,20 @@
   <div class="highlight columns">
     <div class="container">
       <div class="form">
-        <form action="" method="post">
+        <form action="http://localhost:8000/api/auth/register" method="post" enctype="multipart/form-data">
         <h1>Registration Form</h1>
 
         <div class="field">
           <label class="label">Nama TIM</label>
           <div class="control">
-            <input class="input" name="namatim" required="" type="text" placeholder="Nama TIM">
+            <input class="input" name="team_name" required="" type="text" placeholder="Nama TIM">
           </div>
         </div>
 
         <div class="field">
           <label class="label">Universitas / Institut</label>
           <div class="control">
-            <input class="input" name="universitas" type="text" placeholder="Universitas / Institut" required="">
+            <input class="input" name="institution" type="text" placeholder="Universitas / Institut" required="">
           </div>
         </div>
 
@@ -82,16 +82,16 @@
         <div class="field is-grouped">
           <label class="label control">Nama Peserta</label>
           <div class="control">
-            <input class="input" name="peserta[0]" type="text" placeholder="Nama Peserta" required="">
+            <input class="input" name="team_member_1" type="text" placeholder="Nama Peserta" required="">
           </div>
           <div class="control">
-            <input class="input" name="peserta[1]" type="text" placeholder="Nama Peserta" required="">
+            <input class="input" name="team_member_2" type="text" placeholder="Nama Peserta" required="">
           </div>
           <div class="control">
-            <input class="input" name="peserta[2]" type="text" placeholder="Nama Peserta" required="">
+            <input class="input" name="team_member_3" type="text" placeholder="Nama Peserta" required="">
           </div>
           <div class="control">
-            <input class="input" name="peserta[3]" type="text" placeholder="Nama Peserta">
+            <input class="input" name="team_member_4" type="text" placeholder="Nama Peserta">
           </div>
         </div>
           <p class="help">Satu Tim Terdiri dari 3-4 Orang</p>
@@ -99,7 +99,7 @@
         <div class="field">
           <label class="label">Upload Bukti Sebagai Mahasiswa Aktif</label>
           <div class="control">
-            <input class="input" type="file" name="bukti" accept=".zip, .rar" placeholder="Jumlah Anggota" required="">
+            <input class="input" type="file" name="active_student_proof" accept=".zip, .rar" placeholder="Jumlah Anggota" required="required">
           </div>
           <p class="help">Upload Bukti Mahasiswa Aktif Semua Anggota Tim dalam format ZIP / RAR</p>
         </div>
@@ -108,7 +108,7 @@
         <div class="field">
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox">
+              <input type="checkbox" required="required">
               Saya sudah membaca rulebook Hackathon Triton 2018 ( <a href="#">Klik Disini</a> untuk download )
             </label>
           </div>
